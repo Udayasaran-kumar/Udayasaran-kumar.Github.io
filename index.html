@@ -1,242 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fullstack Developer Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-    body {
-      background: #f8f9fa;
-      color: #212529;
-      line-height: 1.6;
-      scroll-behavior: smooth;
-    }
-    header {
-      background: #343a40;
-      color: white;
-      padding: 2rem 1rem 1rem;
-      animation: fadeInDown 1s ease;
-      position: relative;
-    }
-    .header-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 1rem;
-    }
-    .menu-toggle {
-      font-size: 1.8rem;
-      cursor: pointer;
-      color: white;
-    }
-    .social-icons {
-      margin-left: auto;
-      display: flex;
-      gap: 1rem;
-    }
-    .social-icons a {
-      color: white;
-      font-size: 1.4rem;
-      transition: color 0.3s ease;
-    }
-    .social-icons a:hover {
-      color: #0d6efd;
-    }
-    .profile {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .profile img {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid white;
-      margin-bottom: 1rem;
-    }
-    .profile h1 {
-      font-size: 2.5rem;
-      text-align: center;
-    }
-    .profile p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-      text-align: center;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 1rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    nav a.button {
-      background: #007bff;
-      padding: 0.4rem 0.8rem;
-      border-radius: 5px;
-    }
-    section {
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin: auto;
-      animation: fadeInUp 1s ease;
-    }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .tech-stack, .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-    }
-    .card {
-      background: white;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .contact {
-      text-align: center;
-    }
-    footer {
-      background: #343a40;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-    a.button {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.6rem 1.2rem;
-      background: #007bff;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-    }
-    a.button:hover {
-      background: #0056b3;
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @media (max-width: 768px) {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fullstack Developer Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+      body {
+        background: #f8f9fa;
+        color: #212529;
+        line-height: 1.6;
+        scroll-behavior: smooth;
+      }
+      header {
+        background: #343a40;
+        color: white;
+        padding: 2rem 1rem 1rem;
+        animation: fadeInDown 1s ease;
+        position: relative;
+      }
+      .header-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+      }
       .menu-toggle {
-        display: block;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: white;
+      }
+      .social-icons {
+        margin-left: auto;
+        display: flex;
+        gap: 1rem;
+      }
+      .social-icons a {
+        color: white;
+        font-size: 1.4rem;
+        transition: color 0.3s ease;
+      }
+      .social-icons a:hover {
+        color: #0d6efd;
+      }
+      .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .profile img {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid white;
+        margin-bottom: 1rem;
+      }
+      .profile h1 {
+        font-size: 2.5rem;
+        text-align: center;
+      }
+      .profile p {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+        text-align: center;
       }
       nav {
-        flex-direction: column;
-        display: none;
-        background-color: #343a40;
-        padding: 1rem;
-      }
-      nav.show {
         display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 1rem;
       }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="header-top">
-      <div class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
-      <div class="social-icons">
-        <a href="https://github.com/Udayasaran-kumar" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/udayasaran-kumar-s-93822b244" target="_blank"><i class="fab fa-linkedin"></i></a>
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      nav a.button {
+        background: #007bff;
+        padding: 0.4rem 0.8rem;
+        border-radius: 5px;
+      }
+      section {
+        padding: 2rem 1rem;
+        max-width: 900px;
+        margin: auto;
+        animation: fadeInUp 1s ease;
+      }
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      .tech-stack,
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+      }
+      .card {
+        background: white;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+      }
+      .contact {
+        text-align: center;
+      }
+      footer {
+        background: #343a40;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+      }
+      a.button {
+        display: inline-block;
+        margin: 0.5rem;
+        padding: 0.6rem 1.2rem;
+        background: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+      }
+      a.button:hover {
+        background: #0056b3;
+      }
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+        nav {
+          flex-direction: column;
+          display: none;
+          background-color: #343a40;
+          padding: 1rem;
+        }
+        nav.show {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="social-icons">
+          <a href="https://github.com/Udayasaran-kumar" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://linkedin.com/in/udayasaran-kumar-s-93822b244"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
       </div>
-    </div>
-    <div class="profile">
-      <img src="DSC_0941-removebg-preview (1).jpg" alt="Udayasaran Kumar S">
-      <h1>Hi, I'm Udayasaran Kumar S</h1>
-      <p>Fullstack Developer · React Native Enthusiast</p>
-    </div>
-    <nav id="navLinks">
-      <a href="#about">About</a>
-      <a href="#tech">Tech Stack</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <a href="resume.pdf" download class="button"><i class="fas fa-download"></i> Resume</a>
-    </nav>
-  </header>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a fullstack developer with a strong focus on building mobile-first experiences using React Native. I enjoy turning ideas into code and creating scalable, performant applications for the web and mobile.</p>
-  </section>
-
-  <section id="tech">
-    <h2>Tech Stack</h2>
-    <div class="tech-stack">
-      <div class="card"><strong>Frontend:</strong> React, React Native, Redux, Chakra UI</div>
-      <div class="card"><strong>Backend:</strong> Firebase</div>
-      <div class="card"><strong>Dev Tools:</strong> Git, Postman, VS Code</div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="card">
-        <h3>Quick Commerce App</h3>
-        <p>React Native app with search, filters, and Firebase Auth integration.</p>
-        <a class="button" href="https://github.com/Udayasaran-kumar/capstone-quick-commerce-app.git"><i class="fab fa-github"></i> GitHub</a>
-        <!-- <a class="button" href="#">Live Demo</a> -->
+      <div class="profile">
+        <img src="DSC_0941-removebg-preview (1).jpg" alt="Udayasaran Kumar S" />
+        <h1>Hi, I'm Udayasaran Kumar S</h1>
+        <p>Fullstack Developer · React Native Enthusiast</p>
       </div>
-      <div class="card">
-        <h3>Casio Clone</h3>
-        <p>Fullstack app with analytics, built with HTML, CSS, and Vanilla.js.</p>
-        <a class="button" href="https://github.com/demonknight119/casioClone.git"><i class="fab fa-github"></i> GitHub</a>
-        <a class="button" href="https://67a8f393b3b13ef4a8033fdd--inquisitive-bienenstitch-fc1112.netlify.app/">Live Demo</a>
+      <nav id="navLinks">
+        <a href="#about">About</a>
+        <a href="#tech">Tech Stack</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="resume.pdf" download class="button"
+          ><i class="fas fa-download"></i> Resume</a
+        >
+      </nav>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I’m a fullstack developer with a strong focus on building mobile-first
+        experiences using React Native. I enjoy turning ideas into code and
+        creating scalable, performant applications for the web and mobile.
+      </p>
+    </section>
+
+    <section id="tech">
+      <h2>Tech Stack</h2>
+      <div class="tech-stack">
+        <div class="card">
+          <strong>Frontend:</strong> React, React Native, Redux, Chakra UI
+        </div>
+        <div class="card"><strong>Backend:</strong> Firebase</div>
+        <div class="card">
+          <strong>Dev Tools:</strong> Git, Postman, VS Code
+        </div>
       </div>
-      <div class="card">
-        <h3>Social Media App</h3>
-        <p>Fullstack app with analytics, built with React, Chakra UI, and Firebase.</p>
-        <a class="button" href="https://github.com/Udayasaran-kumar/TEAM-GROOT.git"><i class="fab fa-github"></i> GitHub</a>
-        <!-- <a class="button" href="https://app.netlify.com/sites/sensational-frangollo-b7b7d0/">Live Demo</a> -->
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="card">
+          <h3>Quick Commerce App</h3>
+          <p>
+            React Native app with search, filters, and Firebase Auth
+            integration.
+          </p>
+          <a
+            class="button"
+            href="https://github.com/Udayasaran-kumar/capstone-quick-commerce-app.git"
+            ><i class="fab fa-github"></i> GitHub</a
+          >
+          <!-- <a class="button" href="#">Live Demo</a> -->
+        </div>
+        <div class="card">
+          <h3>Casio</h3>
+          <p>
+            Fullstack app with analytics, built with HTML, CSS, and Vanilla.js.
+          </p>
+          <a
+            class="button"
+            href="https://github.com/demonknight119/casioClone.git"
+            ><i class="fab fa-github"></i> GitHub</a
+          >
+          <a
+            class="button"
+            href="https://67a8f393b3b13ef4a8033fdd--inquisitive-bienenstitch-fc1112.netlify.app/"
+            >Live Demo</a
+          >
+        </div>
+        <div class="card">
+          <h3>Social Media App</h3>
+          <p>
+            Fullstack app with analytics, built with React, Chakra UI, and
+            Firebase.
+          </p>
+          <a
+            class="button"
+            href="https://github.com/Udayasaran-kumar/TEAM-GROOT.git"
+            ><i class="fab fa-github"></i> GitHub</a
+          >
+          <!-- <a class="button" href="https://app.netlify.com/sites/sensational-frangollo-b7b7d0/">Live Demo</a> -->
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: ssaran3091998@gmail.com</p>
-    <p><a class="button" href="mailto:ssaran3091998@gmail.com">Send Email</a></p>
-  </section>
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Email: ssaran3091998@gmail.com</p>
+      <p>
+        <a class="button" href="mailto:ssaran3091998@gmail.com">Send Email</a>
+      </p>
+    </section>
 
-  <footer>
-    &copy; 2025 Udayasaran Kumar S. All rights reserved.
-  </footer>
+    <footer>&copy; 2025 Udayasaran Kumar S. All rights reserved.</footer>
 
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('navLinks');
-      nav.classList.toggle('show');
-    }
-  </script>
-</body>
+    <script>
+      function toggleMenu() {
+        const nav = document.getElementById("navLinks");
+        nav.classList.toggle("show");
+      }
+    </script>
+  </body>
 </html>
